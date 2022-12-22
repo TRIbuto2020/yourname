@@ -1,0 +1,71 @@
+@use 'var';
+@use 'hero';
+@use 'header';
+@use 'footer';
+@use 'sinopse';
+@use 'assistir';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    list-style: none;
+}
+
+body{
+    background-image: linear-gradient(120deg, var.$corDeFundo 70%, var.$corDeFundo2);
+    background-attachment: fixed;
+}
+
+@mixin text($fontSize: 16px){
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: var.$corTextoSecundario;
+}
+
+@mixin title($fontSize: 40px){
+    @include text($fontSize);
+    color: var.$corTextoPrincipal;
+}
+
+
+.text{
+    @include text();
+
+    @media (max-width: 768px){
+        @include text(14px);
+    }
+}
+
+.text--small{
+    @include text(12px);
+
+    @media (max-width: 768px){
+        @include text(11px);
+    }
+}
+
+.link-text{
+    @include text(18px);
+    color: var.$corTextoSecundario;
+    text-decoration: underline;
+}
+
+
+.title{
+    @include title();
+    font-size: 56px;
+    color: var.$corTextoPrincipal;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    text-align: center;
+    margin: 32px auto;
+
+    @media (max-width: 768px){
+        @include title(24px);
+    }
+}
+
+

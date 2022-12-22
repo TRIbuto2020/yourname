@@ -1,0 +1,45 @@
+@use 'var';
+
+.header{
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    @media (max-width: 1280px){
+        background-color: var.$corDeFundo;
+    }
+    
+    &--is-hidden{
+        height: 0px;
+        
+        .header{
+            &__logo{
+                opacity: 0;
+            }
+        }
+    }
+
+    &__container{
+        padding: 8px 36px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+
+        @media (max-width: 1280px){
+            padding: 0 12px 0 20px;
+            justify-content: center;
+        }
+    }
+
+    &__logo{
+        max-width: 260px;
+        width: 100%;
+        margin: 5px;
+        transition: all .5s linear;
+
+        @media (max-width: 768px){
+            max-width: 50vw;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+@use 'var';
+
+.hero{
+    padding: 5.6vw;
+    height: 50vh;
+    background-image: url(../images/background.jpg);
+    background-attachment: fixed;
+    text-align: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    &__content{
+        max-width: 1080px;
+
+        @media (max-width: 768px){
+            margin: 10vh auto;
+        }
+        
+        &__branding{
+            width: 90%;
+            margin: 0 auto;
+            border-radius: 16px;
+
+            img{
+                max-width: 90%;
+            }
+
+        }
+    }
+
+    @media (max-width: 768px){
+        height: 25vh;
+    }
+}

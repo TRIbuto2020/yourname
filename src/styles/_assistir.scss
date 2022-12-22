@@ -1,0 +1,40 @@
+@use 'buttons';
+
+.assistir{
+
+    h2{
+        margin-top: 128px;
+    }
+    &__container{
+        max-width: 1240px;
+        width: 80%;
+        margin: 64px auto 128px;
+
+        .button{
+            
+            @media (max-width: 1280px) {                
+                margin-bottom: 16px;
+                width: 100%;
+                padding: 12px;
+                display: flex;
+                align-items: center;
+                border: none;
+            }
+
+            span{
+
+                @media (max-width: 1280px){
+                    font-size: 1.2rem;
+                    background-color: transparent;
+                }
+            }
+        }
+
+        @media (min-width: 768px){
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+        }
+    }
+}
